@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "resume work-plan"
+        "resume facts"
+        "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 2fr 1fr auto;;
+    background-color: #fdefef;
+    overflow: hidden;
+    gap:5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    grid-area: header;
+    background-color: #e5fddf;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+   font-size: large;
+   font-weight: 600;
+}
+
+.resume {
+    grid-area: resume;
+    background-color: #fdefef;
+    padding: 20px;
+    display: block;
+    overflow-y: auto;
+    border-color: #ffd8d8;
+    border-style: solid;
+    border-width: 8px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: groove;
+}
+
+p{
+    text-align: justify;
+}
+
+.resume-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 90%;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.resume-item {
+    width: 100%;
+    max-height: 100px; 
+    overflow-y: auto;
+}
+
+/* styling the button*/
+.resume-item summary {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    list-style: none;
+    font-weight: 500;
+    height: 100%;
+    flex: 1;
+}
+
+/*button style upon clicking*/
+.resume-item[open] summary {
+    background-color: #e8f0e6;
+    margin-bottom: 10px;
+}
+
+.resume-item .content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.work-plan {
+    grid-area: work-plan;
+    background-color: #fdefef;
+    padding: 15px;
+    overflow-y: auto;
+    /* border: #e8f0e6; */
+    border-color: #ffd8d8;
+    border-style: solid;
+    border-width: 8px;
+    border-style: groove;
+    
+}
+
+.work-plan details {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.work-plan details details {
+    margin-left: 40px;
+}
+
+
+.facts {
+    grid-area: facts;
+    background-color: #fdefef;
+    padding: 20px;
+    border-color: #ffd8d8;
+    border-style: solid;
+    border-width: 8px;
+    border-style: groove;
+    background-image: url('artbcgrd.jfif');
+}
+.facts p{
+   font-family: cursive;
+   font-size: large; 
+   font-weight: 400;
+}
+
+.facts a{
+    color: rgba(79, 6, 247, 0.967);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #bbceb6dc;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h2 {
+    color: #1f1e1e;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #424242;
+}
+
+.particle{
+    width: 5px;
+    height: 5px;
+    border-radius: 10%;
+    background-color: rgb(92, 255, 173);
+
+    position: absolute;
+    z-index: 10;
+}
